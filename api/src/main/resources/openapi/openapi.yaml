@@ -1,0 +1,27 @@
+openapi: 3.0.1
+info:
+  title: Hello World API
+  description: Eine einfache Hallo-Welt-API
+  version: 1.0.0
+
+paths:
+  /hello:
+    get:
+      summary: Gibt eine Hallo-Welt-Nachricht zurück
+      operationId: getHelloMessage
+      responses:
+        '200':
+          description: Erfolgreiche Antwort
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HelloResponse'
+
+components:
+  schemas:
+    HelloResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Hallo Welt"
