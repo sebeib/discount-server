@@ -13,14 +13,6 @@
     <artifactId>discount-server-api</artifactId>
     <packaging>jar</packaging>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/sebeib/discount-server</url>
-        </repository>
-    </distributionManagement>
-
     <dependencies>
         <!-- Für die generierten Interfaces -->
         <dependency>
