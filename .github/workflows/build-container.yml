@@ -23,6 +23,10 @@ jobs:
 
       - name: Build and Deploy Jar to GitHub Packages
         working-directory: ./api
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
         run: mvn clean deploy
 
   publish-container:
