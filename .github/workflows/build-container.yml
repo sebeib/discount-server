@@ -20,13 +20,11 @@ jobs:
           java-version: '17'
           server-id: github
           settings-path: ${{ github.workspace }}
+          server-username: GITHUB_ACTOR
+          server-password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and Deploy Jar to GitHub Packages
         working-directory: ./api
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
         run: mvn clean deploy
 
   publish-container:
