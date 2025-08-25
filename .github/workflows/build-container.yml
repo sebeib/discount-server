@@ -19,7 +19,6 @@ jobs:
           distribution: temurin
           java-version: '17'
           server-id: github
-          settings-path: ${{ github.workspace }}
           server-username: GITHUB_ACTOR
           server-password: ${{ secrets.GITHUB_TOKEN }}
 
